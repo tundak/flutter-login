@@ -16,7 +16,7 @@ class HomeScreenPresenter {
     databaseHelper.getFirstUser().then((User user) 
     {
       _view.onDisplayUserInfo(user);
-    }).catchError((Exception error) {
+    }).catchError((error) {
       _view.onErrorUserInfo();
     });
   }

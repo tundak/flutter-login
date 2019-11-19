@@ -15,7 +15,7 @@ class LoginScreenPresenter {
   doLogin(String username, String password) async {
     api.login(username, password).then((User user) {
       processLoginSuccess(user);
-    }).catchError((Exception error) => _view.onLoginError(error.toString()));
+    }).catchError((error) => _view.onLoginError(error.toString()));
   }
 
   void processLoginSuccess(User user) async {
